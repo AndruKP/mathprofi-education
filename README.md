@@ -18,5 +18,5 @@ needed.
 1. OB — obce (municipality of Slovakia) (local level — L)
 2. OK — okresy (districts of Slovakia) (local level — L)
 3. KR — kraje (regions of Slovakia) (regional level — R)
-4. OL — oblasti (Bratislava, East, West, Center) (regional level — R)
+4. OL — oblasti (economical regions) (Bratislava, East, West, Center) (regional level — R)
 5. SR — Slovak Republic (regional level — R)
