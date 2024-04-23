@@ -1,25 +1,25 @@
 import pandas as pd
 import numpy as np
 
-TRANSLATE_COLUMNS = {'5-ročné vekové skupiny': '5-year age groups',
+TRANSLATE_COLUMNS = {'5-ročné vekové skupiny': 'year_5_age_groups',
                      'Ekonomické vekové skupiny': 'economical age groups',
                      'Kód kraja': 'NUTS3_CODE',
                      'Kód obce': 'LAU2_CODE',
                      'Kód oblasti': 'NUTS2_CODE',
                      'Kód okresu': 'LAU1_CODE',
                      'Kód štátu': 'NUTS1_CODE',
-                     'Názov kraja': 'region name',
-                     'Názov obce': 'municipality name',
-                     'Názov oblasti': 'NUTS2 name',
-                     'Názov okresu': 'district name',
-                     'Názov štátu': 'state name',
-                     'Odvetvie ekonomickej činnosti\u200b (NACE - sekcie)': 'NACE section',
+                     'Názov kraja': 'region_name',
+                     'Názov obce': 'municipality_name',
+                     'Názov oblasti': 'NUTS2_name',
+                     'Názov okresu': 'district_name',
+                     'Názov štátu': 'state_name',
+                     'Odvetvie ekonomickej činnosti\u200b (NACE - sekcie)': 'NACE_section',
                      'Pohlavie': 'sex',
-                     'Súčasná ekonomická aktivita': 'current economic activity',
+                     'Súčasná ekonomická aktivita': 'current_economic_activity',
                      'Vek': 'age',
                      'Vzdelanie': 'education',
                      'Zamestnanie '
-                     '(ISCO - triedy)': 'ISCO occupation',
+                     '(ISCO - triedy)': 'ISCO_occupation',
                      'abs.': 'count'}
 
 
