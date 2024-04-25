@@ -1,0 +1,45 @@
+nezistené
+Pracovníci v osobných službách
+Odborní pracovníci v oblasti práva, sociálnych vecí a kultúry a podobní pracovníci
+Administratívni pracovníci v zákazníckych službách
+dôverné
+Riadiaci pracovníci (manažéri) vo výrobe a v špecializovaných službách
+Špecialisti v oblasti práva, sociálnych vecí a kultúry
+Administratívni pracovníci na záznam číselných a skladových údajov
+Predavači
+Pracovníci pri likvidácii odpadu a ostatní nekvalifikovaní pracovníci
+Riadiaci pracovníci (manažéri) v hotelových, reštauračných, obchodných a v ostatných službách
+Špecialisti v oblasti vedy a techniky
+Špecialisti v oblasti informačných a komunikačných technológií
+Kvalifikovaní robotníci v hutníctve, strojárstve a podobní robotníci
+Montážni robotníci
+Vodiči a obsluha pojazdných strojných zariadení
+Technici v oblasti informačných a komunikačných technológií
+Elektrikári a elektronici
+Riadiaci pracovníci (manažéri)  administratívnych, podporných a obchodných  činností
+Špecialisti administratívnych, podporných a obchodných činností
+Technici a odborní pracovníci v oblasti vedy a techniky
+Odborní pracovníci v zdravotníctve
+Odborní pracovníci administratívnych, podporných a obchodných činností
+Pracovníci v oblasti osobnej starostlivosti
+Spracovatelia a výrobcovia potravinárskych výrobkov, výrobkov z dreva a odevov
+Operátori stacionárnych strojov a zariadení
+Všeobecní administratívni pracovníci a zapisovatelia
+Pracovníci verejnej ochrany a bezpečnostných služieb
+Učitelia a odborní pedagogickí pracovníci
+Ostatní pomocní administratívni pracovníci
+Špecialisti v zdravotníctve
+Pomocní pracovníci v ťažbe, stavebníctve, výrobe a doprave
+Pomocní pracovníci pri príprave jedla
+Kvalifikovaní pracovníci v poľnohospodárstve (trhovo orientovaní)
+Zákonodarcovia, ústavní činitelia, vysokí štátni úradníci a najvyšší predstavitelia podnikov a organizácií
+Umeleckí a ruční remeselníci a tlačiari
+Ostatné ozbrojené sily
+Dôstojníci ozbrojených síl
+Upratovači a pomocníci
+Kvalifikovaní stavební robotníci a remeselníci okrem elektrikárov
+Pomocní pracovníci v poľnohospodárstve, lesníctve a rybárstve
+Poddôstojníci ozbrojených síl
+Pouliční predavači a pomocní pracovníci v podobných  službách
+Kvalifikovaní pracovníci v lesníctve, rybárstve a poľovníctve (trhovo orientovaní)
+Farmári, rybári, poľovníci a zberači úrody (samozásobovatelia)

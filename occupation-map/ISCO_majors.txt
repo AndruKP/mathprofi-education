@@ -1,0 +1,10 @@
+"Legislators, senior officials and managers",
+"Professionals",
+"Technicians and associate professionals",
+"Clerks",
+"Service workers and shop and market sales workers",
+"Skilled agricultural and fishery workers",
+"Craft and related trades workers",
+"Plant and machine operators and assemblers",
+"Elementary occupations",
+"Armed forces"
