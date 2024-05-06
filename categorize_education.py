@@ -10,14 +10,14 @@ EDUCATION_CATEGORY_MAP = {
     "stredné odborné (učňovské) vzdelanie bez maturity s výučným listom": "secondary",
     "stredné odborné (učňovské) vzdelanie bez maturity s vysvedčením o záverečnej skúške": "secondary",
     "úplné stredné vzdelanie s maturitou všeobecné": "secondary",
-    "vyššie odborné vzdelanie vyššie odborné (absolventská skúška, absolventský diplom)": "higher",
+    "vyššie odborné vzdelanie vyššie odborné (absolventská skúška, absolventský diplom)": "vocational",
+    "vyššie odborné vzdelanie nadstavbové (maturita absolventov učebných odborov stredných odborných škôl)": "vocational",
+    "vyššie odborné vzdelanie pomaturitné (pomaturitné kvalifikačné)": "vocational",
+    "vyššie odborné vzdelanie (bližšie neuvedené)": "vocational",
     "vysokoškolské vzdelanie - 1. stupeň (Bc.)": "higher",
-    "vyššie odborné vzdelanie nadstavbové (maturita absolventov učebných odborov stredných odborných škôl)": "higher",
     "vysokoškolské vzdelanie (bližšie neuvedené)": "higher",
-    "vyššie odborné vzdelanie pomaturitné (pomaturitné kvalifikačné)": "higher",
     "vysokoškolské vzdelanie - 2. stupeň (Ing.; Mgr.; MUDr.; a i.)": "higher",
     "vysokoškolské vzdelanie - 3. stupeň (PhD.; a i.)": "higher",
-    "vyššie odborné vzdelanie (bližšie neuvedené)": "higher",
     "bez ukončeného vzdelania – osoby vo veku 0-14 rokov": "without",
     "bez školského vzdelania – osoby vo veku 15 rokov a viac": "without",
     "nezistené": "unspecified",
@@ -31,7 +31,9 @@ def categorize_education(data):
     education_levels -= set(primary)  # for quering purposes
     secondary = [x for x in education_levels if "stredné" in x]
     education_levels -= set(secondary)
-    higher = [x for x in education_levels if "vysokoškolské" in x or "vyššie" in x]
+    vocational = [x for x in education_levels if "vyššie" in x]
+    education_levels -= set(vocational)
+    higher = [x for x in education_levels if "vysokoškolské" in x]
     education_levels -= set(higher)
     without = [x for x in education_levels if "bez" in x]
     education_levels -= set(without)
@@ -45,8 +47,15 @@ def categorize_education(data):
         [
             (level, category)
             for category, levels in zip(
-                ["primary", "secondary", "higher", "without", "unspecified"],
-                [primary, secondary, higher, without, unspecified],
+                [
+                    "primary",
+                    "secondary",
+                    "vocational",
+                    "higher",
+                    "without",
+                    "unspecified",
+                ],
+                [primary, secondary, vocational, higher, without, unspecified],
             )
             for level in levels
         ]
