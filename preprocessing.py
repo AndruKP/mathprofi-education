@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 TRANSLATE_COLUMNS = {'5-ročné vekové skupiny': 'year_5_age_groups',
-                     'Ekonomické vekové skupiny': 'economical age groups',
+                     'Ekonomické vekové skupiny': 'economical_age_groups',
                      'Kód kraja': 'NUTS3_CODE',
                      'Kód obce': 'LAU2_CODE',
                      'Kód oblasti': 'NUTS2_CODE',
@@ -21,6 +21,11 @@ TRANSLATE_COLUMNS = {'5-ročné vekové skupiny': 'year_5_age_groups',
                      'Zamestnanie '
                      '(ISCO - triedy)': 'ISCO_occupation',
                      'abs.': 'count'}
+
+TRANSLATE_SEX = {
+    'muž': 'male',
+    'žena': 'female'
+}
 
 
 def rename_columns(df: pd.DataFrame) -> pd.DataFrame:
@@ -41,3 +46,17 @@ def replace_with_nan(df: pd.DataFrame) -> pd.DataFrame:
     :return: DataFrame with NaN values
     """
     return df.replace(['nezistené', 'dôverné'], np.NaN)
+
+
+def age_preprocess(age_string: str):
+    """
+    Preprocesses age string to integer
+    .. note:: Preprocesses age string (90+ age transforms into 90)
+    """
+    if age_string == '90 a viac rokov':
+        return 90
+    return int(age_string)
+
+
+def translate_sex(df: pd.DataFrame) -> pd.DataFrame:
+    return df.replace(TRANSLATE_SEX)
