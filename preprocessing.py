@@ -22,6 +22,32 @@ TRANSLATE_COLUMNS = {'5-ročné vekové skupiny': 'year_5_age_groups',
                      '(ISCO - triedy)': 'ISCO_occupation',
                      'abs.': 'count'}
 
+EDUCATION_CATEGORY_MAP = {
+    "základné vzdelanie - 1. stupeň základnej školy": "primary",
+    "základné vzdelanie (bližšie neuvedené)": "primary",
+    "základné vzdelanie - 2. stupeň základnej školy": "primary",
+    "úplné stredné vzdelanie s maturitou (bližšie neuvedené)": "secondary",
+    "stredné odborné (učňovské) vzdelanie bez maturity a bez výučného listu (zaškolenie, zaučenie)": "secondary",
+    "úplné stredné vzdelanie s maturitou odborné (učňovské) s výučným listom": "secondary",
+    "stredné odborné (učňovské) vzdelanie bez maturity (bližšie neuvedené)": "secondary",
+    "úplné stredné vzdelanie s maturitou odborné": "secondary",
+    "stredné odborné (učňovské) vzdelanie bez maturity s výučným listom": "secondary",
+    "stredné odborné (učňovské) vzdelanie bez maturity s vysvedčením o záverečnej skúške": "secondary",
+    "úplné stredné vzdelanie s maturitou všeobecné": "secondary",
+    "vyššie odborné vzdelanie vyššie odborné (absolventská skúška, absolventský diplom)": "vocational",
+    "vyššie odborné vzdelanie nadstavbové (maturita absolventov učebných odborov stredných odborných škôl)": "vocational",
+    "vyššie odborné vzdelanie pomaturitné (pomaturitné kvalifikačné)": "vocational",
+    "vyššie odborné vzdelanie (bližšie neuvedené)": "vocational",
+    "vysokoškolské vzdelanie - 1. stupeň (Bc.)": "higher",
+    "vysokoškolské vzdelanie (bližšie neuvedené)": "higher",
+    "vysokoškolské vzdelanie - 2. stupeň (Ing.; Mgr.; MUDr.; a i.)": "higher",
+    "vysokoškolské vzdelanie - 3. stupeň (PhD.; a i.)": "higher",
+    "bez ukončeného vzdelania – osoby vo veku 0-14 rokov": "without",
+    "bez školského vzdelania – osoby vo veku 15 rokov a viac": "without",
+    "nezistené": "unspecified",
+    "dôverné": "unspecified",
+}
+
 TRANSLATE_SEX = {
     'muž': 'male',
     'žena': 'female'
@@ -46,6 +72,9 @@ def replace_with_nan(df: pd.DataFrame) -> pd.DataFrame:
     :return: DataFrame with NaN values
     """
     return df.replace(['nezistené', 'dôverné'], np.NaN)
+
+def group_by_education_level(df: pd.DataFrame) -> pd.DataFrame:
+    return df.replace(EDUCATION_CATEGORY_MAP)
 
 
 def age_preprocess(age_string: str):
