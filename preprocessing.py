@@ -117,6 +117,8 @@ OCCUPATION_ISCO_MAP = {
     "Pouliční predavači a pomocní pracovníci v podobných  službách": "Service workers and shop and market sales workers",
     "Kvalifikovaní pracovníci v lesníctve, rybárstve a poľovníctve (trhovo orientovaní)": "Skilled agricultural and fishery workers",
     "Farmári, rybári, poľovníci a zberači úrody (samozásobovatelia)": "Skilled agricultural and fishery workers",
+    "nezistené": "unspecified",
+    "neaplikovateľné": "inapplicable"
 }
 
 REQURED_EDUCATION_MAP = {
@@ -202,6 +204,9 @@ def age_preprocess(age_string: str) -> int:
     """
     Preprocesses age string to integer
     .. note:: Preprocesses age string (90+ age transforms into 90)
+
+    :param age_string: string with age literal
+    :return: int in [0; 90]
     """
     if age_string == '90 a viac rokov':
         return 90
