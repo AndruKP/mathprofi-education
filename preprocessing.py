@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 TRANSLATE_COLUMNS = {'5-ročné vekové skupiny': 'year_5_age_groups',
                      'Ekonomické vekové skupiny': 'economical_age_groups',
@@ -193,10 +192,18 @@ def group_by_education_level(df: pd.DataFrame) -> None:
 
 
 def group_by_isco(df: pd.DataFrame) -> None:
+    """
+    Creates new column with grouping by ISCO classification
+    See https://isco-ilo.netlify.app/en/isco-08/ ((c) 2024 International Labour Organization (ILO)) for more details
+    """
     df['ISCO_group'] = df['ISCO_occupation'].map(OCCUPATION_ISCO_MAP).astype('category')
 
 
 def group_by_sector(df: pd.DataFrame) -> None:
+    """
+    Creates new column with grouping by economic sector
+    Primary, secondary, tertiary, other activities and undefined
+    """
     df['NACE_group'] = df['NACE_section'].map(ECONOMIC_SECTORS_MAP).astype('category')
 
 
