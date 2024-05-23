@@ -1,7 +1,7 @@
 # mathprofi-education
 
-dev branch for current work on project, do not push in main - instead use pull requests, and use it only where it's
-needed.
+Project on the course "Data Visualization" (UNIBA) (course [link](https://bbrejova.github.io/viz/)).
+In this project, education in Slovakia is analyzed based on the 2021 census (data [source](https://www.scitanie.sk/obyvatelia/rozsirene-vysledky)).
 
 ## Data description:
 
@@ -20,3 +20,6 @@ needed.
 3. KR — kraje (regions of Slovakia) (regional level — R) (NUTS - 3)
 4. OL — oblasti (economical regions) (Bratislava, East, West, Center) (regional level — R) (NUTS - 2)
 5. SR — Slovak Republic (regional level — R) (NUTS - 1)
+
+# Analysis
+Some of the analysis is in the notebook in English, full analysis you can in file [`mathprofi_report.pdf`](mathprofi_report.pdf) (in Slovak).
